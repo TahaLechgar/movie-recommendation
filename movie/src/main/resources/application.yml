@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: ${DATASOURCE_URL:jdbc:postgresql://localhost:54320/movie}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
+    driverClassName: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
