@@ -15,11 +15,12 @@ import java.util.List;
 public class MovieService {
     private final MovieRepository movieRepository;
 
+    @Transactional
     public void save(Movie movie) {
         movieRepository.save(movie);
     }
 
-    @Transactional
+
     public List<Movie> findAll() {
         return movieRepository.findAll();
     }
