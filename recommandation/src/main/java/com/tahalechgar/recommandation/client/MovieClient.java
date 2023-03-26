@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(value = "MOVIE-SERVICE", url = "http://localhost:8080")
+@FeignClient(value = "MOVIE-SERVICE", url = "http://movie-app:8080")
 public interface MovieClient {
 
     @GetMapping(value = "/movies")
