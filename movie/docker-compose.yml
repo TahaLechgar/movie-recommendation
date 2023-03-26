@@ -17,7 +17,7 @@ services:
     ports:
       - "5432:5432"
 
-  app:
+  movie-app:
     image: tahalechgar/movie
     networks:
       - movie_net
@@ -33,6 +33,14 @@ services:
       - "8080:8080"
     depends_on:
       - db
+
+  recommendation-app:
+    image: tahalechgar/recommendations
+    networks:
+      - movie_net
+    container_name: recommendation-app
+    ports:
+      - "8081:8081"
 
 networks:
   movie_net:
